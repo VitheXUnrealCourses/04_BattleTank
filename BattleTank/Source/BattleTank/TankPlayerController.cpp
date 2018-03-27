@@ -18,10 +18,24 @@ void ATankPlayerController::BeginPlay()
 	//UE_LOG(LogTemp,Warning,TEXT("Tank Player Controller: Begin Play called"))
 }
 
+void ATankPlayerController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	//UE_LOG(LogTemp, Warning, TEXT("TankPlayerController ticking."));
+}
+
 
 ATank* ATankPlayerController::GetControlledTank() const
 {
 	
 	return Cast<ATank>(GetPawn());
+}
+
+void ATankPlayerController::AimTowardsCrosshair()
+{
+	if (!GetControlledTank()) { return; }
+	//get world location if linecast through crosshair
+	//
 }
 

@@ -20,5 +20,11 @@ public:
 	ATank* GetControlledTank() const;
 
 	void BeginPlay() override;
+
+	void Tick(float DeltaTime) override;
+
+private:
+	//Start the tank moving the barrle so the shot hits where the crosshair is.
+	void AimTowardsCrosshair()
 	
 };
