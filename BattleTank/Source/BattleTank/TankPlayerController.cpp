@@ -15,7 +15,7 @@ void ATankPlayerController::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("PlayerController possesing: %s"),*ControlledTank->GetName())
 	}
-	UE_LOG(LogTemp,Warning,TEXT("Tank Player Controller: Begin Play called"))
+	//UE_LOG(LogTemp,Warning,TEXT("Tank Player Controller: Begin Play called"))
 }
 
 
