@@ -16,15 +16,14 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 	GENERATED_BODY()
 	
 public: 
-
-	ATank* GetControlledTank() const;
-
 	void BeginPlay() override;
 
 	void Tick(float DeltaTime) override;
 
 private:
+	ATank* GetControlledTank() const;
 	//Start the tank moving the barrle so the shot hits where the crosshair is.
-	void AimTowardsCrosshair()
+	void AimTowardsCrosshair();
+	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 	
 };
